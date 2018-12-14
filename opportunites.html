@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>APRIME OPPORTUNITES</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <meta name="description" content="Aprime est une entreprise du groupe Trévise, elle est en activité depuis 23 ans. Spécialisée dans le secteur d'activité du conseil en systèmes et logiciels informatiques, elle vous accompagne dans votre transformation digitale.">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+   <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body id="bodytest">
+  
+   <div id="titre_opportunites" >
+     <div class="row menu nomargin" id="burger-content">
+      <nav>
+        <ul class="barremenu nomargin">
+          <li><a href="index.html#presentation" onclick="closeSidebar()">APRIME</a></li>
+          <li><a href="page404.html" onclick="closeSidebar()">NOS POLES D'EXPERTISE</a></li>
+          <li><a href="index.html#reference" onclick="closeSidebar()">NOS REFERENCES</a></li>
+          <li><a href="opportunites.html">NOS OPPORTUNITES</a></li>
+          <li><a href="index.html#contactid" onclick="closeSidebar()">CONTACT</a></li>
+      </ul>
+      </nav>
+    </div>
+   </div>
+
+  <div>
+    <img class="logocss" src="logos/aprime_logo_loaded_blanc.png" alt="Logo Aprime"/>
+    <h1 class="h1 white" id="titrelogo"> Votre partenaire en transformation digitale</h1>
+  </div>
+
+  
+  <button id="burger-button">☰</button>
+
+  <button onclick="topFunction()" class="fixed" id="btnHaut"></button>
+
+  <div id="burger-sidebar">
+      <div id="burger-sidebar-header"></div>
+      <div id="burger-sidebar-body"></div>
+  </div>
+
+  <div id="burger-overlay"></div>
+
+  <script>
+      let content = document.getElementById('burger-content');
+      let sidebarBody = document.getElementById('burger-sidebar-body');
+      let button = document.getElementById('burger-button');
+      let overlay = document.getElementById('burger-overlay');
+      let activatedClass = 'burger-activated';
+      let classToRemove = 'barremenu';
+
+      sidebarBody.innerHTML = content.innerHTML;
+
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        this.parentNode.classList.add(activatedClass);
+
+        document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.remove(classToRemove);
+      });
+
+      button.addEventListener('keydown', function(e) {
+        if (this.parentNode.classList.contains(activatedClass))
+        {
+          if (e.repeat === false) {
+            this.parentNode.classList.remove(activatedClass);
+            document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.add(classToRemove);
+          }
+        }
+      });
+
+      overlay.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        this.parentNode.classList.remove(activatedClass);
+        document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.add(classToRemove);
+      });
+
+
+
+
+      //Fonction pour fermer la sidebar lorsque l'on clique sur un lien
+      function closeSidebar(){
+        document.getElementById('bodytest').classList.remove(activatedClass);
+      }
+
+
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      document.getElementById("btnHaut").style.display = "block";
+      } else {
+      document.getElementById("btnHaut").style.display = "none";
+      }
+      }
+
+      function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      }
+  </script>
+
+  <div id="corps">
+      <div class="row">
+
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="container">
+            <div class="texte" >
+              
+              <br>
+            </div>
+          </div>
+         
+      </div>
+    
+
+      <div class="row">
+        <div class="col-lg-offset-0 col-lg-12 center" id="devis">
+          <h3>Un devis ou une information ?</h3>
+          <h1 id="invitation" >CONTACTEZ-NOUS</h1>
+          <div id="numero" class="white"><h1>01 40 22 03 49</h1></div>
+        </div>
+      </div>
+
+      <div class="row" id="references">
+         <div class="img-container col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-4 col-xs-3 logoref" id="img1"></div>
+      </div>
+
+      
+  </div>
+
+  <div class="row" id="footer">
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12" id="contact">
+          <h2 class="center white" id="contactid">Nous joindre par mail</h2>
+          <form id="formu" onsubmit="validEmail()" action="https://formspree.io/%65&#110;&#122;%6f&#46;f%6fnt&#101;&#110;e%61u&#64;hotma%69l%2e&#102;%72" method="POST">
+            <input type="text" name="nom" placeholder="Votre nom" size="55" required><br><br>
+            <input type="email" placeholder="Votre email" id="user-email" size="55" required><br><br>
+            <input type="text" name="sujet" placeholder="Sujet" size="55" required><br><br>
+            <textarea name="message" placeholder="Votre message" rows="8" cols="54" required></textarea><br><br>
+            <input type="submit" id="contact-form-submit" value="Envoyer">
+            <p id="masque">Veuillez saisir une adresse mail valide...</p>
+          </form>
+        </div>
+
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 center white" id="bureaux">
+          <h2 class="center">Nos bureaux</h2>
+          <p>APRIME SAS<br>
+           3, rue de l'Arrivée<br>
+            75015 Paris<br>
+            France<br>
+            Tel : 01 40 22 03 49<br>
+            Fax : 01 40 22 03 49</p>
+        </div>
+
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 white" id="localisation">
+          <h2 class="center">Nous sommes ici</h2>
+          <div id="map">
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsPq5xRnNOj-_ivwXj7yQJXwIl-ZSL9mY&callback=myMap"></script> <!-- Le lien Google Maps ne doit surtout pas être touché à moins de vouloir générer une nouvelle clé API (voir https://www.w3schools.com/graphics/google_maps_basic.asp) -->
+          </div>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 white">
+          <p class="mentions"><a href="mentions_legales.html" target="_blank">Mentions légales</a> - By Aprime</p>
+        </div>
+  </div>
+
+</body>
+</html>
