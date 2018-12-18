@@ -16,50 +16,19 @@
 </head>
 
 <body id="bodytest">
-  <script>
-    function diaporama () {
 
-      if (indice === max-1) indice = 0;
-      else indice ++;
-      image = slides[indice];
-
-      let elmt = document.getElementById("slider");
-
-      elmt.style.background="url(" + image + ") center center no-repeat";
-      elmt.style.backgroundSize = "100%";
-    }
-
-
-    function runSlider()
-    {
-      let elmt = document.getElementById("slider");
-
-      elmt.style.background="url('assets/Pont_Chaban.jpg') center center no-repeat";
-      elmt.style.backgroundSize = "100%";
-
-      setInterval('diaporama();',8000);
-    }
-
-    let slides = ["assets/Pont_Chaban.jpg", "assets/Arcachon2.jpg", "assets/Chateau_Bordeaux2.jpg"];
-    let max = slides.length;
-    let indice = 0;
-  </script>
- <!--  <header id="slider">
-    <div class="row" id="titre_principal">
-    </div>
-  </header> -->
 
    <div id="titre_principal" >
      <div class="row menu nomargin" id="burger-content">
-      <nav>
+     <!--  <nav> -->
         <ul class="barremenu nomargin">
           <li><a href="index.html#aprime" onclick="closeSidebar()">APRIME</a></li>
-          <li><a href="page404.html" onclick="closeSidebar()">NOS POLES D'EXPERTISE</a></li>
+          <li><a href="developpement.html#corps" onclick="closeSidebar()">NOS POLES D'EXPERTISE</a></li>
           <li><a href="#references" onclick="closeSidebar()">NOS REFERENCES</a></li>
-          <li><a href="opportunites.html">NOS OPPORTUNITES</a></li>
+          <li><a href="opportunites.html#corps">NOS OPPORTUNITES</a></li>
           <li><a href="index.html#contactid" onclick="closeSidebar()">CONTACT</a></li>
-      </ul>
-      </nav>
+        </ul>
+     <!--  </nav> -->
     </div>
    </div>
 
@@ -177,27 +146,29 @@
       </div>
 
       <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10 center" id="team">
               <h4>Nos équipes interviennent dans 2 principaux domaines :</h4>
               <p>
-              <b>En conception et développement d'applications :<b><br>
-                <ul>
-                  <li>Expertise et conception d’applications, TMA,</li>
-                  <li>Architectures Java, J2EE, Microsoft.Net, LAMP,</li>
-                  <li>Réalisation et intégration d'applications e-business,</li>
-                  <li>Conception et réalisation de portails d'entreprise,</li>
-                  <li>Processus de développement et méthode AGILE.</li>
-                </ul>
-              <b>En gestion des infrastructures :<b><br>
-                <ul>
-                  <li>Audit et architecture,</li>
-                  <li>Ingénierie Systèmes et Réseaux,</li>
-                  <li>Exploitation des SI, Production,</li>
-                  <li>Expertise et administration des données,</li>
-                  <li>Virtualisation, Cloud, Mobilité,</li>
-                  <li>Gestion de projets MOA, MOE.</li>
-                </ul>
-              </p>  
+                En conception et développement d'applications :<br>
+                  <ul>
+                    <li>Expertise et conception d’applications, TMA,</li>
+                    <li>Architectures Java, J2EE, Microsoft.Net, LAMP,</li>
+                    <li>Réalisation et intégration d'applications e-business,</li>
+                    <li>Conception et réalisation de portails d'entreprise,</li>
+                    <li>Processus de développement et méthode AGILE.</li>
+                  </ul>
+                </p> 
+                <p>
+                En gestion des infrastructures :<br>
+                  <ul>
+                    <li>Audit et architecture,</li>
+                    <li>Ingénierie Systèmes et Réseaux,</li>
+                    <li>Exploitation des SI, Production,</li>
+                    <li>Expertise et administration des données,</li>
+                    <li>Virtualisation, Cloud, Mobilité,</li>
+                    <li>Gestion de projets MOA, MOE.</li>
+                  </ul>
+              </p> 
               <br>
         </div>
       </div>
@@ -229,7 +200,7 @@
 
       <div class="row">
         <div class="col-lg-offset-0 col-lg-12 center" id="devis">
-          <h3>Un devis ou une information ?</h3>
+          <h3>Un devis, une information ?</h3>
           <h1 id="invitation" >CONTACTEZ-NOUS</h1>
           <div id="numero" class="white"><h1>01 40 22 03 49</h1>
           </div>
@@ -278,6 +249,20 @@
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 center" id="actualite">
+          <h3>Nos autres activités</h3>
+          <a href="https://akema.fr" target="_blank">
+            <img src="logos/Akema.png" alt="Youtube">
+          </a>  
+          <a href="https://youtu.be/JBULId7E70w?list=UUozLFn8-7NixzPMBTPgd5-g" target="_blank">
+            <img src="logos/Youtube.png" alt="Youtube">
+          </a>    
+           <a href="https://11h42.com/" target="_blank">
+            <img src="logos/Logo11h42.png" alt="11h42.com">
+          </a>
+        </div>
+      </div>
   </div>
 
   <div class="row" id="footer">

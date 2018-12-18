@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>APRIME ETUDES ET DEVELOPPEMENT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <meta name="description" content="Aprime est une entreprise du groupe Trévise, elle est en activité depuis 23 ans. Spécialisée dans le secteur d'activité du conseil en systèmes et logiciels informatiques, elle vous accompagne dans votre transformation digitale.">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+   <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body id="bodytest">
+  
+   <div id="titre_principal" >
+     <div class="row menu nomargin" id="burger-content">
+      <nav>
+        <ul class="barremenu nomargin">
+          <li><a href="index.html#aprime" onclick="closeSidebar()">APRIME</a></li>
+          <li><a href="developpement.html#corps" onclick="closeSidebar()">NOS POLES D'EXPERTISE</a></li>
+          <li><a href="#references" onclick="closeSidebar()">NOS REFERENCES</a></li>
+          <li><a href="opportunites.html#corps">NOS OPPORTUNITES</a></li>
+          <li><a href="index.html#contactid" onclick="closeSidebar()">CONTACT</a></li>
+      </ul>
+      </nav>
+    </div>
+   </div>
+
+  <div>
+    <img class="logocss" src="logos/aprime_logo_loaded_blanc.png" alt="Logo Aprime"/>
+    <h1 class="h1 white" id="titrelogo"> Votre partenaire en transformation digitale</h1>
+  </div>
+
+  
+  <button id="burger-button">☰</button>
+
+  <button onclick="topFunction()" class="fixed" id="btnHaut"></button>
+
+  <div id="burger-sidebar">
+      <div id="burger-sidebar-header"></div>
+      <div id="burger-sidebar-body"></div>
+  </div>
+
+  <div id="burger-overlay"></div>
+
+  <script>
+      let content = document.getElementById('burger-content');
+      let sidebarBody = document.getElementById('burger-sidebar-body');
+      let button = document.getElementById('burger-button');
+      let overlay = document.getElementById('burger-overlay');
+      let activatedClass = 'burger-activated';
+      let classToRemove = 'barremenu';
+
+      sidebarBody.innerHTML = content.innerHTML;
+
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        this.parentNode.classList.add(activatedClass);
+
+        document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.remove(classToRemove);
+      });
+
+      button.addEventListener('keydown', function(e) {
+        if (this.parentNode.classList.contains(activatedClass))
+        {
+          if (e.repeat === false) {
+            this.parentNode.classList.remove(activatedClass);
+            document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.add(classToRemove);
+          }
+        }
+      });
+
+      overlay.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        this.parentNode.classList.remove(activatedClass);
+        document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.add(classToRemove);
+      });
+
+
+
+
+      //Fonction pour fermer la sidebar lorsque l'on clique sur un lien
+      function closeSidebar(){
+        document.getElementById('bodytest').classList.remove(activatedClass);
+      }
+
+
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      document.getElementById("btnHaut").style.display = "block";
+      } else {
+      document.getElementById("btnHaut").style.display = "none";
+      }
+      }
+
+      function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      }
+  </script>
+
+  <div id="etude">
+     <!--  Projets et technos Etude et Developpement-->
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h4 class="titre" >POLE ETUDES ET DEVELOPPEMENTS</h4>
+             <h3 class="soustitre">ASSURANCE</h3>
+             <p class="titrerouge">
+              Projet « Outil d´analyses et de catastrophes »
+             </p>
+             <p>
+              L´objectif est de fournir aux entités d´un grand groupe d´assurance ainsi qu´aux réassureurs des outils logiciels qui leur permettent d´estimer l´exposition aux risques de catastrophes naturelles de tout leur portefeuille.<br><br>
+              <b>Teamweb</b> réalise un site web qui centralise le système de validation pour analyser puis valider les données de réassurance venant des entités du groupe et des réassureurs dans le monde entier.<br>
+              Durée : 18 H/mois.<br>
+              Environnement technique : ASP.Net, WPF, WCF, SQL Server 2008, Ajax, Jquery, Multithread, XML.
+             </p>
+             <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/SQL Server 2008.png" alt="SQL Server 2008">
+          <img src= "assets/JQuery.png" alt="JQuery">
+          <img src= "assets/AJAX_logo.png" alt="Ajax">
+          <img src= "assets/Xml.png" alt="XML">
+          <img src= "assets/Wcf.png" alt="WCF">
+          <img src= "assets/Aspnet.png" alt="Asp.NET">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">SERVICES PUBLICS</h3>
+             <p class="titrerouge">
+              Projet « Guichet virtuel »
+             </p>
+             <p>
+             L´objectif du développement de ce portail en langue Arabe et en Français est de permettre aux différents utilisateurs (juristes, avocats, clients) d´obtenir des informations auprès des tribunaux.<br>
+             Réalisé par <b>Teamweb</b>, il comporte deux parties : <br><br>
+             Une partie Back office avec un module d´authentification sécurisée et de gestion de configuration d´un outil (middlegen) de génération de fichier supportant la langue arabe.<br>
+             Une partie Front office avec un module de génération de documents sous format PDF en Français et en Arabe.<br>
+             Durée : 14H/mois.<br>
+             Environnement technique : Java, JSP, Servlet, XML, Struts, Hibernate, Netbeans, PowerDesigner, CVS, Ireport.
+             </p>
+             <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Hibernate.png" alt="Hibernate">
+          <img src= "assets/Jsp.png" alt="JSP">
+          <img src= "assets/Xml.png" alt="XML">
+          <img src= "assets/Java.png" alt="Java">
+          <img src= "assets/Netbeans.png" alt="NetBeans">
+          <img src= "assets/iReport.png" alt="IReport">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">SERVICES FINANCIERS</h3>
+             <p class="titrerouge">
+              Projet « Simulation de crédit »
+             </p>
+             <p>
+             L´objectif de ce projet est de construire un site WEB qui permet aux clients de l´établissement de crédit de gérer leurs comptes par Internet (particuliers et partenaires commerciaux).<br><br>
+             Ce site WEB leur permet de gérer leurs plans financiers par Internet tels que :<br>
+             -Demandes de prêts immobiliers,<br>
+             -Simulations des taux,<br>
+             -Coûts des mensualités,<br>
+             Puis de faire valider par les services internes le dossier de l´emprunteur.<br>
+             Durée : 10H/Mois.<br>
+             Environnement technique : ASP.Net, Ajax, Jquery, SQL Server 2008, IIs, Multithread, WCF, XML.
+             </p>
+             <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/SQL Server 2008.png" alt="SQL Server 2008">
+          <img src= "assets/IIS.png" alt="IIS">
+          <img src= "assets/JQuery.png" alt="JQuery">
+          <img src= "assets/AJAX_logo.png" alt="Ajax">
+          <img src= "assets/Xml.png" alt="XML">
+          <img src= "assets/Wcf.png" alt="WCF">
+          <img src= "assets/Aspnet.png" alt="Asp.NET">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">BANQUE</h3>
+             <p class="titrerouge">
+              Projet « Ecobase »
+             </p>
+             <p>
+            L´objectif de ce projet est d´une part de maintenir et de faire évoluer une base historique des données des contreparties (rating, CDS, Etc..) et des indicateurs macro-économiques (PIB, Chômage Etc..) et d´autre part de donner la possibilité aux experts de créer des scénariis de stress économique.<br><br>
+            Durée : 14H/Mois<br>
+            Environnement technique : C#, NHibernate, Spring.Net, Services WCF, ASP MVC 3 Razor, jqGrid Oracle 10G.
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Spring.png" alt="Spring">
+          <img src= "assets/CSharp.png" alt="C#">
+          <img src= "assets/Wcf.png" alt="WCF">
+          <img src= "assets/NHibernate.png" alt="NHibernate">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">EQUIPEMENT DE TRADING</h3>
+             <p class="titrerouge">
+              Projet « Web Services pour salles de marché »
+             </p>
+             <p>
+            L´objectif de ce projet est de développer les Web Services annexes à un système de téléphonie en salle de marché permettant aux traders :<br><br>
+            -De suivre les communications téléphoniques,<br>
+            -De noter la présence des utilisateurs du système,<br>
+            -De superviser les alarmes et les pannes,<br>
+            -D´interroger et de synchroniser les annuaires LDAP.<br>
+            Durée : 24H/mois.<br>
+            Environnement technique : Java, Web Services, SOAP, XML, Subversion.
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Subversion_Logo.png" alt="Subversion">
+          <img src= "assets/Soap.png" alt="Soap">
+          <img src= "assets/Xml.png" alt="XML">
+          <img src= "assets/Java.png" alt="Java">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">SERVICES MULTIMEDIA</h3>
+             <p class="titrerouge">
+              Projet « Astro »
+             </p>
+             <p>
+              Durée : 7H/Mois.<br>
+              Environnement technique : Java, Jsp, Eclipse, ANT, Junit, Jmeter, Linux, MySql.
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Mysql.png" alt="MySQL">
+          <img src= "assets/Java.png" alt="Java">
+          <img src= "assets/Jsp.png" alt="JSP">
+          <img src= "assets/Linux.png" alt="Linux">
+          <img src= "assets/JUnit.png" alt="JUnit">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">PRESSE</h3>
+             <p class="titrerouge">
+              Projet « TraM »
+             </p>
+             <p>
+              L´objectif de ce projet consiste en le développement d´un système de <b>Tracking Marketing</b> ciblé pour un site d´informations financières en ligne permettant le suivi des actions des utilisateurs (la recherche, l´analyse et le stockage des traces du suivi en communication avec une base OLTP d´une part et le développement d´un site WEB d´administration des données (gestion de mots-clés, interface d´envoi de mails personnalisés à une liste pré-établie) en base OLTP.<br><br>
+              Durée : 7H/Mois.<br>
+              Environnement technique : Java, Jsp, Eclipse, ANT, Junit, Jmeter, Linux, MySql.
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/HP_UX.png" alt="HPUX">
+          <img src= "assets/HTML5_logo.png" alt="HTML5">
+          <img src= "assets/Perl.png" alt="Perl">
+          <img src= "assets/Java.png" alt="Java">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">PUBLICITE</h3>
+             <p class="titrerouge">
+              Projet « Internet Mobile »
+             </p>
+             <p>
+              L´objectif est de développer les outils et progiciels informatiques on line de la société de diffusion de publicités sur Internet Mobile, de mesure de performance, de création de mini sites et d´applications mobiles tout en garantissant l´évolutivité de ces outils et en veillant en permanence à l´adéquation des outils avec les besoins des clients.<br><br>
+              Durée : 20H/Mois<br>
+              Environnement technique : PHP5, Framework Zend, javascript, XML, SQL, Ajax, plate-forme IPhone/ANDROID, Méthode AGILE.
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Zend.png" alt="Zend">
+          <img src= "assets/PHP.png" alt="PHP">
+          <img src= "assets/Android_logo.png" alt="Android">
+          <img src= "assets/AJAX_logo.png" alt="Ajax">
+          <img src= "assets/Xml.png" alt="XML">
+          <img src= "assets/Agile.png" alt="Agile">
+        </div>
+      </div>
+    </div>
+    <!-- Fin Projets et technos -->
+
+    <div id="infra">
+    <!--  Projets et technos infrastructure-->
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h4 class="titre" >POLE D'INFRASTRUCTURE</h4>
+             <h3 class="soustitre">FINANCES</h3>
+             <p class="titrerouge">
+              Projet « Administration de bases de données Oracle »
+             </p>
+             <p>
+              - Projet principal : sécurisation et haute disponibilité de la plateforme EAI (Webmethod V7) avec une architecture RAC 10G.<br>
+              - Rédaction de la documentation relatif à l’administration du RAC 10G (installation, gestion des services, de l’ASM et du backup rman).<br>
+              - Définition des tests techniques : robustesse, stress, failover.<br>
+              - Réalisation d’une simulation d’un DRP.<br>
+              - Optimisation des paramètres d’instance.<br>
+              - Administration de 300 bases Oracle dont 50 en production et 2 dataguard physical (8i et 9i) : installation, configuration, backup, duplication, monitoring, gestion des incidents.<br><br>
+              Durée : 18 mois.<br>
+              ENVIRONNEMENT TECHNIQUE : ORACLE 8I, 9I ET 10GR2, RAC, asm, dataguard, rman , OEM 10G, TKPROF, QUEST CENTRAL, SQL plus, Oracle SQL Developper Toad, linux, RHEL 5, AIX, SOLARIS, OCFS2
+             </p>
+             <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Oracle8i.gif" alt="Oracle">
+          <img src= "assets/Linux.png" alt="Linux">
+          <img src= "assets/Aix.png" alt="Aix">
+          <img src= "assets/Solaris.jpg" alt="Oracle Solaris">
+          <img src= "assets/QuestCentral.jpg" alt="QuestCentral">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">JEUX EN LIGNE</h3>
+             <p class="titrerouge">
+              Projet « Administration de bases de données Oracle »
+             </p>
+             <p>
+             - Administration générale et maintien en condition opérationnelle des environnements confiés : production, preprod, isoprod, UAT, développement : surveillance et gestion des espaces disques via ASM, consommation CPU/mémoire, respect de la politique de sécurité, haute disponibilité dataguard.<br><br>
+              - Préparation et réalisation de campagnes de stabilisation des performances : surveillance des remontées du SQL Advisor, surveillance requetage des bases de données, analyse des plans d’exécution soumis par la maintenance automatique Oracle, analyse quotidienne des rapports AWR, tuning DDL et DML,<br>
+              - Préparation et réalisation de la migration de l’ensemble des bases Oracle 11gR1 vers Oracle 11gR2, reconstruction physical standby dataguard.,<br>
+              - Définition de la politique de backup, migration backup depuis SAN vers NFS type NetApp, restauration de bases de données via restore RMAN ou flashback database (point in time,SCN).<br><br>
+              Durée : 12 mois<br>
+              Environnement technique : ORACLE 11GR2 (rdbms, RAC, asm, dataguard, rman), Linux OEL x86 64bit 5.6, OEM12C Cloud Control, Oracle SQL Developper 3, ksh/sh/bash
+             </p>
+             <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Oracle11.png" alt="Oracle 11">
+          <img src= "assets/Linux.png" alt="Linux">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">ENERGIE</h3>
+             <p class="titrerouge">
+              Projet « Mise en place d’un cadre normatif pour une offre de services interne sur SQL Server 2008 et support aux équipes sur les thèmes suivants : »
+             </p>
+             <p>
+              - Moyen d’accès par environnement : Définition des éléments et droits nécessaires pour accéder à des environnements de développement, intégration, pré production et production.<br>
+              - Monitoring : Suivi et alertes types sur le Moniteur système et l’Agent SQL Server. Audit : Création de rapports types à partir des rapports standard, personnalisés et de performance dashboard pour valider la qualité des systèmes.<br>
+              - Conception de bases de données : Création de documents de conception, de Check-list et de PTI pour implémenter des bases de données.<br>
+              - Sauvegarde / Restauration : Procédure de définition des modes de sauvegardes.<br>
+              - Capacity Planning : Procédures de mise en place de collecte de données à partir du Moniteur système et du Générateur de Profils pour permettre une montée en charge de SQL Server.<br><br>
+              Durée : 8 mois.<br>
+              Environnement technique : WINDOWS SERVER 2008, SQL SERVER 2008
+             </p>
+             <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/WindowsServer.png" alt="WindowsServer">
+          <img src= "assets/SQL Server 2008.png" alt="SQL Server 2008">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">DISTRIBUTION</h3>
+             <p class="titrerouge">
+              Projet « Ingénierie système »
+             </p>
+             <p>
+             1-Evolution de l’infrastructure<br>
+              - Migration de l’ensemble des accès Internet vers une seule infrastructure sécurisée,<br>
+              - Migration de la plateforme VMware Virtual Center 3.5 vers vSphere 4,<br>
+              - Migration des magasins sous NT4 vers Windows 2008 Server (70 sites),<br>
+              - Préparation de la migration du domaine central AD 2003 vers AD 2008.<br><br>
+              2-Administration et exploitation<br>
+              - Gestion de l’environnement de production de l’infrastructure du siège et des magasins,<br>
+              - Support aux équipes de techniciens hotline et de proximité : mise en place d’outils pour l’administration, mise en place de procédures d’exploitation.<br><br>
+              Durée : 18 mois.<br>
+              Environnement technique :Windows NT à 2008 Server (200 serveurs), Windows XP et Seven (5000 utilisateurs), réseau Cisco / Alcatel / Bluecoat ProxySG, datacenters, VMware vSphere, SAN et Filers NetApp, McAfee EPO
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/WindowsServer.png" alt="WindowsServer">
+          <img src= "assets/Cisco.png" alt="Cisco">
+          <img src= "assets/Blue-coat.png" alt="Blue Coat">
+          <img src= "assets/VSphere.png" alt="VSphere">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">INDUSTRIE</h3>
+             <p class="titrerouge">
+              Projet « Migration Active Directory à l’échelle mondiale »
+             </p>
+             <p>
+            - Installation et mise en production des Contrôleurs de domaines.<br>
+            - Délégations de l’administration Active Directory aux IT locaux.<br>
+            - Gestion et Adaptation des GP- , scripts d’ouvertures de session selon les besoins du pays.<br>
+            - Accompagnement aux équipes IT à la migration des utilisateurs et postes de travail.<br>
+            - Rédaction de documents d’exploitation.<br>
+            - Support de Niveau 3 aux IT pays.<br><br>
+            Durée : 18 mois.<br>
+            Environnement Technique : Windows 2003 Server, 2008 Server et Storage, XP, Vista, Seven, ESXi, Vsphère, Exchange 2010, Domino, Novell e-Guide, Safe Guard Easy et Enterprise 5.60, Active Directory, DRA NetIQ, GPA NetIQ, Trend Micro, EMC Networker, WSUS, Mcafee Foundstone, CRM, Sharepoint, DameWare, GLPI, OCS inventory, Lansweeper.
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/NetIQ.png" alt="NetIQ">
+          <img src= "assets/OCS.png" alt="OCS Inventory">
+          <img src= "assets/SQL Server 2008.png" alt="SQL Server 2008">
+          <img src= "assets/Glpi-bleu.png" alt="GLPI">
+          <img src= "assets/Trend-Micro.png" alt="Trend Micro">
+          <img src= "assets/SharePoint.png" alt="SharePoint">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">LUXE</h3>
+             <p class="titrerouge">
+              Projet « Administration système et réseau WINDOWS »
+             </p>
+             <p>
+              - Administration et Gestion des incidents niveaux 2 et 3 sur environnement de Production,<br>
+              - Mise en oeuvre des accès externes sécurisés via Wallix Admin Bastion,<br>
+              - Migration des Serveurs d’Impression,<br>
+              - Mise en production des applications en coordination avec les équipes projet,<br>
+              - Finalisation de la migration de l’antivirus.<br><br>
+              DUREE : 12 MOIS<br>
+              Environnement Technique : Windows2003/2008 R2, Citrix Metaframe Presentation Server 4.5, Sophos Antivirus, ESX Server 5.0
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Citrix.png" alt="Citrix">
+          <img src= "assets/Windows_server-2003-to-server-2008.png" alt="Windows Server 2008">
+          <img src= "assets/sophos.png" alt="Sophos">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">BANQUES</h3>
+             <p class="titrerouge">
+              Projet « Administration système et réseau »
+             </p>
+             <p>
+              - Validation et mise en oeuvre des mises à jour système des Juniper Secure Access,<br>
+              - Mise en oeuvre de la fonctionnalité Juniper Secure Meeting,<br>
+              - Administration et Gestion des incidents niveaux 2 et 3 sur les environnements Juniper.<br><br>
+              DUREE : 8 MOIS.<br>
+              Environnement Technique : Windows 2003, Citrix Metaframe Presentation Server 4.5, Juniper Secure Access 4500/6500
+            </p>
+            <br>
+        </div>
+        <div class="col-xl-offset-2 col-xl-8 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 center technos">
+          <img src= "assets/Citrix.png" alt="Citrix">
+          <img src= "assets/Juniper.gif" alt="Juniper">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-offset-0 col-xl-12 col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-offset-0 col-sm-12 col-xs-offset-0 col-xs-12 left">
+             <h3 class="soustitre">BATIMENT</h3>
+             <p>
+              - Mise en place et maintien en condition opérationnelle du support niveau 2 au sein de la DSI groupe du portail Intranet du groupe ( WebSphere 6.1) , de la gestion de l’annuaire,<br>
+              groupe ( annuaire LDAP SUN) et de la gestion des applications GED,<br>
+              -Architecture et développement des pages du Portail Intranet ( WebSphere 6.1),<br>
+              -Gestion et formation des équipes OFFSHORE en Inde.<br><br>
+              Durée : 30 mois
+            </p>
+            <br>
+        </div>
+      </div>
+      <!-- Fin Projets et technos -->
+    </div>
+
+      <div class="row">
+        <div class="col-lg-offset-0 col-lg-12 center" id="devis">
+          <h3>Un devis, une information ?</h3>
+          <h1 id="invitation" >CONTACTEZ-NOUS</h1>
+          <div id="numero" class="white"><h1>01 40 22 03 49</h1></div>
+        </div>
+      </div>
+
+      <div class="row" id="references">
+         <div class="img-container col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-4 col-xs-3 logoref" id="img1">
+         </div>
+         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 center">
+            <h4>Nos références</h4>
+            <ul>
+              <li>ATOS MULTIMEDIA</li>
+              <li>AXA</li>
+              <li>BOUYGUES TELECOM</li>
+              <li>CANAL+</li>
+              <li>CARESTREAM</li>
+              <li>CCR</li>
+              <li>CELLFISHMEDIA</li>
+              <li>E-PACK</li>
+              <li>ETRALI (Orange Business Systèmes</li>
+              <li>EXPERIAN</li>
+              <li>FRANCE 2</li>
+              <li>RANCE TELECOM</li>
+              <li>E MONEY BANK</li>
+              <li>HAVAS VOYAGES-AMERICAN EXPRESS</li>
+              <li>IBM</li>
+              <li>MARIAGE FRERES</li>
+              <li>NCR</li>
+              <li>NOVARTIS</li>
+              <li>OBERTHUR CS</li>
+              <li>OCCITANIE</li>
+              <li>ORANGE</li>
+              <li>PSA</li>
+              <li>PRICEWATERHOUSECOOPERS</li>
+              <li>SAFIG</li>
+              <li>SAINT GOBAIN</li>
+              <li>SOCIETE GENERALE</li>
+              <li>SUN</li>
+              <li>TF1</li>
+              <li>THALES</li>
+              <li>Groupe LA POSTE</li>
+              <li>TOTAL</li>
+            </ul>  
+            <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 center" id="actualite">
+          <h3>Nos autres activités</h3>
+          <a href="https://youtu.be/JBULId7E70w?list=UUozLFn8-7NixzPMBTPgd5-g" target="_blank">
+            <img src="logos/Youtube.png" alt="Youtube">
+          </a>  
+          <a href="https://akema.fr" target="_blank">
+            <img src="logos/Akema.png" alt="Youtube">
+          </a>  
+          <a href="https://11h42.com/" target="_blank">
+            <img src="logos/Logo11h42.png" alt="11h42.com">
+          </a>
+        </div>
+    </div>
+      
+  </div>
+
+  <div class="row" id="footer">
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12" id="contact">
+          <h2 class="center white" id="contactid">Nous joindre par mail</h2>
+          <form id="formu" onsubmit="validEmail()" action="https://formspree.io/%65&#110;&#122;%6f&#46;f%6fnt&#101;&#110;e%61u&#64;hotma%69l%2e&#102;%72" method="POST">
+            <input type="text" name="nom" placeholder="Votre nom" size="55" required><br><br>
+            <input type="email" placeholder="Votre email" id="user-email" size="55" required><br><br>
+            <input type="text" name="sujet" placeholder="Sujet" size="55" required><br><br>
+            <textarea name="message" placeholder="Votre message" rows="8" cols="54" required></textarea><br><br>
+            <input type="submit" id="contact-form-submit" value="Envoyer">
+            <p id="masque">Veuillez saisir une adresse mail valide...</p>
+          </form>
+        </div>
+
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 center white" id="bureaux">
+          <h2 class="center">Nos bureaux</h2>
+          <p>APRIME SAS<br>
+           3, rue de l'Arrivée<br>
+            75015 Paris<br>
+            France<br>
+            Tel : 01 40 22 03 49<br>
+            Fax : 01 40 22 03 49</p>
+        </div>
+
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 white" id="localisation">
+          <h2 class="center">Nous sommes ici</h2>
+          <div id="map">
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsPq5xRnNOj-_ivwXj7yQJXwIl-ZSL9mY&callback=myMap"></script> <!-- Le lien Google Maps ne doit surtout pas être touché à moins de vouloir générer une nouvelle clé API (voir https://www.w3schools.com/graphics/google_maps_basic.asp) -->
+          </div>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 white">
+          <p class="mentions"><a href="mentions_legales.html" target="_blank">Mentions légales</a> - By Aprime</p>
+        </div>
+  </div>
+
+</body>
+</html>
