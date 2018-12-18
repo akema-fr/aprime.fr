@@ -14,6 +14,23 @@
 	src: url('../fonts/RobotoCondensed-Light.ttf');
 }
 
+@font-face{
+  font-family: HelveticaNeue;
+  src: url('../fonts/HelveticaNeueLTStd Lt.otf');
+}
+
+@font-face{
+  font-family: MavenProMedium;
+  src: url('../fonts/MavenPro-Medium.ttf');
+}
+
+@font-face{
+  font-family: MavenProRegular;
+  src: url('../fonts/MavenPro-Regular.ttf');
+}
+
+
+
 html {
   padding: 0;
   margin : 0;
@@ -34,13 +51,20 @@ body{
 
 #titre_principal{
   width: 100%;
+  padding-bottom: 53%;
+  background: url('../assets/Tour-montparnasse-paris.jpg') center center no-repeat;
+  background-size: 100%;
+  overflow : hidden;
+  position : relative;
 }
 
-#slider{
-  padding-bottom: 25%;
-	background: url('../assets/Pont_Chaban.jpg') center center no-repeat;
+#titre_opportunites{
+  width: 100%;
+  padding-bottom: 53%;
+  background: url('../assets/Paris_Tour_Montparnasse_masque.jpg') center center no-repeat;
   background-size: 100%;
-  transition: all 0.6s linear;
+  overflow : hidden;
+  position : relative;
 }
 
 #titrelogo{
@@ -117,14 +141,18 @@ body{
 }
 
 #burger-sidebar-body li:first-child:before {
-  background-image: url("../assets/akema2.png");
+  background-image: url("../assets/aprime.png");
 }
 
 #burger-sidebar-body li:nth-child(2):before {
-  background-image: url("../assets/loupe.png");
+  background-image: url("../assets/produit.png");
 }
 
 #burger-sidebar-body li:nth-child(3):before {
+  background-image: url("../assets/loupe.png");
+}
+
+#burger-sidebar-body li:nth-child(4):before {
   background-image: url("../assets/thumbs-up.png");
 }
 
@@ -148,30 +176,41 @@ body{
   background-color: rgba(0, 0, 0, .4);
 }
 
+#invitation,
+h3 {
+  color : #B1804A;
+}
+
 h5.italic{
 	font-style: italic;
 }
 
 .menu {
-	background: #070e67;
-  margin-right: 0;
+	background: transparent;
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
 }
 
 .barremenu {
 	margin: 0 auto;
-	background: #070e67;
+	background: transparent;
 	border-radius: 0;
 	width: 100%;
 	height : 2%;
 	list-style-type : none !important;
   transition: 0.4s;
   text-align: center;
+
+  position : absolute;
+  bottom : 20px;
 }
 
 .barremenu li{
 	display : inline-block;
-	padding : 0.8% 6.5%;
+	padding : 0.8% 3.5%;
   transition: 0.4s;
+  font-size : 0.9em;
 }
 
 .barremenu li a{
@@ -179,23 +218,27 @@ h5.italic{
 	font-family: LatoR, serif;
 	text-decoration : none;
 	outline : none;
+  transition: 0.4s;
 }
 
 .barremenu li a:hover{
 	color: white ;
-	background: #1d257c;
 	text-decoration : none;
 	outline : none;
+  transition: 0.4s;
 }
 
 .barremenu li a:visited,
 .barremenu li a:active {
 	text-decoration : none;
 	outline : none;
+  transition: 0.4s;
 }
 
 .barremenu li:hover{
-	background: #1d257c;
+  background : rgba(16, 76, 99, .7);
+  transition: 0.4s;
+/*  font-size : 1em;*/
 }
 
 #btnHaut{
@@ -229,13 +272,96 @@ h5.italic{
   background-position: center;
 }
 
+#infra,
+#etude,
 #corps{
 	background: whiteSmoke;
-	font-family: LatoR, serif;
+	/*font-family: MavenProMedium, serif;*/
+  color : black;
 }
 
 #corps h4 {
-	margin: 2% 5%;
+	margin: 2% 0;
+  font-family: MavenProRegular, serif;
+  color : #144363;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+#corps p {
+  margin: 2% 10%;
+  font-family: MavenProRegular, serif;
+  color : #555;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#corps ul {
+  font-family: MavenProRegular, serif;
+  color : #555;
+  text-align: center;
+  font-size: 1.1em;
+  list-style-type : none !important;
+}
+
+.titre {
+  margin: 2% 10%;
+  font-family: MavenProRegular, serif;
+  color : #144363;
+  text-align: left;
+  font-size: 1.4em;
+}
+
+.soustitre {
+  margin: 1% 10%;
+  font-family: MavenProRegular, serif;
+  color : #555;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+#infra {
+  display : none;
+}
+
+#infra p,
+#etude p {
+  margin: 1% 10%;
+  font-family: MavenProRegular, serif;
+  color : #555;
+  text-align: left;
+  font-size: 1em;
+}
+
+#infra img,
+#etude img {
+  width : 10%;
+  padding : 0 0.5%;
+}
+
+.titrerouge {
+  font-family: MavenProRegular, serif;
+  color : #FF0000 !important;
+  text-align: left;
+  font-size: 1em;
+}
+
+#cafe{
+  width : 38%;
+}
+
+#team {
+  background: url("../assets/Team-Work.png") no-repeat;
+  background-position: right;
+  background-size: 40%;
+}
+
+#notfound{
+  background: whiteSmoke;
+  font-family: MavenProMedium, serif;
+  color : #144363;
+  font-size: 2em;
+  padding-top : 4%;
 }
 
 .accordeon{
@@ -247,10 +373,6 @@ h5.italic{
 	outline: none;
 	transition: 0.4s;
   margin: 20px auto 0 auto;
-}
-
-.centre {
-  text-align : center;
 }
 
 .actif, .accordeon:hover{
@@ -303,6 +425,22 @@ h5.italic{
 
 #references{
   margin-top: 30px;
+  padding-bottom : 2%;
+}
+
+#references ul{
+  padding : 0 !important;
+}
+
+
+#references li{
+  display: block;
+  text-decoration: none;
+  outline : none;
+  font-family: HelveticaNeue, sans-serif;
+  text-align: center;
+  color : #104363;
+  margin: 0.6% 0;
 }
 
 #reference{
@@ -322,124 +460,9 @@ h5.italic{
 }
 
 #img1{
-	background: url(../assets/acteon_gris.png) center center no-repeat;
-}
-
-#img1:hover{
-  background: url(../assets/acteon.png) center center no-repeat;
-}
-
-#img2{
-	background: url(../assets/coaxis_gris.png) center center no-repeat;
-}
-
-#img2:hover{
-  background: url(../assets/coaxis.png) center center no-repeat;
-}
-
-#img3{
-	background: url(../assets/touton_gris.png) center center no-repeat;
-}
-
-#img3:hover{
-  background: url(../assets/touton.png) center center no-repeat;
-}
-
-#img4{
-	background: url(../assets/logoAme_gris.png) center center no-repeat;
-}
-
-#img4:hover{
-  background: url(../assets/logoAme.png) center center no-repeat;
-}
-
-#img5{
-	background: url(../assets/clairsienne_gris.png) center center no-repeat;
-}
-
-#img5:hover{
-  background: url(../assets/clairsienne.png) center center no-repeat;
-}
-
-#img6{
-	background: url(../assets/BMS_gris.png) center center no-repeat;
-}
-
-#img6:hover{
-  background: url(../assets/BMS.png) center center no-repeat;
-}
-
-#img7{
-	background: url(../assets/logo_400x400_gris.png) center center no-repeat;
-}
-
-#img7:hover{
-  background: url(../assets/logo_400x400.png) center center no-repeat;
-}
-
-#img8{
-	background: url(../assets/dekra_gris.png) center center no-repeat;
-}
-
-#img8:hover {
-  background: url(../assets/dekra.png) center center no-repeat;
-}
-
-
-#img9{
-  background: url(../assets/jepilote_gris.png) center center no-repeat;
-}
-
-#img9:hover {
-  background: url(../assets/jepilote.png) center center no-repeat;
-}
-
-#img10{
-  background: url(../assets/boxers_gris.png) center center no-repeat;
-}
-
-#img10:hover {
-  background: url(../assets/boxers.png) center center no-repeat;
-}
-
-#img11{
-  background: url(../assets/equalia_gris.png) center center no-repeat;
-}
-
-#img11:hover {
-  background: url(../assets/equalia.png) center center no-repeat;
-}
-
-#img12{
-  background: url(../assets/frenchtech_gris.png) center center no-repeat;
-}
-
-#img12:hover {
-  background: url(../assets/frenchtech.png) center center no-repeat;
-}
-
-#img13{
-  background: url(../assets/unikeco_gris.png) center center no-repeat;
-}
-
-#img13:hover {
-  background: url(../assets/unikeco.png) center center no-repeat;
-}
-
-#img14{
-  background: url(../assets/trilogie_gris.png) center center no-repeat;
-}
-
-#img14:hover {
-  background: url(../assets/trilogie.png) center center no-repeat;
-}
-
-#img15{
-  background: url(../assets/syrpin_gris.png) center center no-repeat;
-}
-
-#img15:hover {
-  background: url(../assets/syrpin.png) center center no-repeat;
+	background: url('../assets/References.jpg') center center no-repeat;
+  background-size: 100%;
+  padding-bottom :2%;
 }
 
 img.resize {
@@ -450,11 +473,30 @@ img.resize {
 #devis{
 	margin-top: 5%;
 	font-family: PoiretOne, serif;
-	margin-bottom: 3%
+	/*margin-bottom: 3%;*/
+  background-color : #EBEBEB;
+  width : 100%;
+  padding-bottom : 2%;
 }
 
+#actualite{
+  background-color : #EBEBEB;
+  width : 100%;
+  padding-bottom : 2%;
+}
+
+#actualite h3{
+  color : #000000; 
+  font-family: PoiretOne, serif;
+}
+
+#actualite img{
+  padding : 0 1.2%;
+}
+
+
 #numero{
-	background: #284094;
+	background: #747A7D;
 	margin: auto;
 	padding-top: 20px;
 	padding-bottom: 25px;
@@ -463,16 +505,16 @@ img.resize {
 	border-radius: 15px;
 }
 
-#footer,
 #bureaux,
 #contact,
 #localisation{
-	background-color : #284094;
 	margin : 0;
 }
 
 #footer {
-	padding-bottom: 5%;
+  background: url('../assets/FooterAprime.jpg') center center no-repeat;
+  background-size: cover;
+  margin : 0;
 }
 
 #bureaux p{
@@ -488,38 +530,6 @@ img.resize {
 	font-family: PoiretOne, serif;
 }
 
-.resosimg{
-  width: 35px;
-  height: 35px;
-  margin: 10px 5px 0 5px;
-  display: inline-block;
-  background-size: 100% !important;
-  transition: 0.1s;
-}
-
-#fb{
-  background: url(../assets/facebook2.png) center center no-repeat;
-}
-
-#fb:hover{
-  background: url(../assets/facebook.png) center center no-repeat;
-}
-
-#twitter{
-  background: url(../assets/twitter2.png) center center no-repeat;
-}
-
-#twitter:hover{
-  background: url(../assets/twitter.png) center center no-repeat;
-}
-
-#lkd{
-  background: url(../assets/linkedin2.png) center center no-repeat;
-}
-
-#lkd:hover{
-  background: url(../assets/linkedin.png) center center no-repeat;
-}
 
 #contact{
 	color: black;
@@ -549,16 +559,26 @@ textarea{
 
 }
 
+.centre, 
 .center{
   text-align: center;
 }
+
+.right{
+  text-align: right;
+}
+
+.left{
+  text-align: left;
+}
+
 
 h2.center{
   margin-bottom: 20px;
 }
 
 #map{
-	width: 500px;
+	width: 435px;
 	height: 350px;
   text-align: center;
   margin: auto;
@@ -574,7 +594,7 @@ h2.center{
   text-align: center;
   font-weight: bold;
   font-size: 15px;
-  font-family: LatoR, serif;
+  font-family: MavenProRegular, serif;
 }
 
 .mentions a{
@@ -588,21 +608,22 @@ h2.center{
 }
 
 .mentions2 {
-  font-family: LatoR, serif;
+  font-family: MavenProRegular, serif;
   padding: 25px 25px;
   font-size: 14px;
 }
 
 .mentions2 a{
   color: white;
+  text-decoration: none;
 }
 
 .mentions2 a:hover{
-  color: white;
+  color: #cccccc;
 }
 
 .rempli{
-  background: #284094;
+  background: #144363;
 }
 
 .mentions2 input[type='button']{
@@ -648,7 +669,7 @@ h2.center{
 .diapo-right li {
   font-size: 2em;
   color: black;
-  font-family: Roboto, serif;
+  font-family: MavenProMedium, serif;
 }
 
 
@@ -668,6 +689,11 @@ h2.center{
   .logoref{
     background-size: 60% !important;
   }
+
+  #cafe{
+    width : 38%;
+  }
+
 }
 
 @media all and (min-width: 992px) and (max-width: 1200px){
@@ -691,6 +717,12 @@ h2.center{
   .texte .imgp{
     height: 75%;
   }
+
+  #cafe{
+    width : 38%;
+  }
+
+ 
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -746,6 +778,11 @@ h2.center{
     width: 24px;
     height: 24px;
   }
+
+  #cafe{
+    width : 65%;
+  }
+
 
 }
 
@@ -808,6 +845,19 @@ h2.center{
     height: 24px;
   }
 
+  #cafe{
+    width : 68%;
+  }
+
+  .technos img {
+    display: none;
+  }
+
+  #infra p,
+  #etude p {
+    text-align: center;
+  }
+
 }
 
 @media all and (max-width: 575px){
@@ -815,9 +865,9 @@ h2.center{
     display: none;
   }
 
- #corps{
-   padding-top: 70px;
- }
+  #corps{
+    padding-top: 70px;
+  }
 
   #titrelogo{
     font-size: 20px;
@@ -877,4 +927,18 @@ h2.center{
   input, textarea{
     width: 75%;
   }
+
+  #cafe{
+    width : 64%;
+  }
+
+  .technos img {
+    display: none;
+  }
+
+  #infra p,
+  #etude p {
+    text-align: center;
+  }
+
 }
