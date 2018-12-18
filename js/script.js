@@ -37,9 +37,10 @@ function validEmail(e) {
 
 /*Fonction servant à générer une carte Google*/
 function myMap() {
-  let myCenter = new google.maps.LatLng(44.776916, -0.660634); /*Définit les coordonnées du centre (ici Akema)*/
+/*  let myCenter = new google.maps.LatLng(44.776916, -0.660634); */
+  let myCenter = new google.maps.LatLng(48.8434039,2.322897600000033);/*Définit les coordonnées du centre (Aprime Paris)*/
   let canvas = document.getElementById("map");
-  let options = {center: myCenter, zoom: 12};/*Définit le centre et le niveau de zoom de la map*/
+  let options = {center: myCenter, zoom: 16};/*Définit le centre et le niveau de zoom de la map*/
   let map = new google.maps.Map(canvas, options); /*Génère la map*/
   let marker = new google.maps.Marker({position: myCenter}); /*Génère un marqueur au centre de la map qui ici est Akema*/
   marker.setMap(map);
