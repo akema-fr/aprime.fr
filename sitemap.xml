@@ -10,12 +10,7 @@
     <loc>https://aprime.fr/opportunites.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://aprime.fr/infrastructure.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
+  </url> 
   <url>
     <loc>https://aprime.fr/developpement.html</loc>
     <changefreq>weekly</changefreq>
