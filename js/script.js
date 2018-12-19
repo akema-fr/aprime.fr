@@ -1,18 +1,3 @@
-/*
-var mail_regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
-
-document.getElementById('contact-form-submit').addEventListener("click", function (e) {
-
-  if (!mail_regex.test(document.getElementById("user-email").value)) {
-    document.getElementById('masque').css('display','block');
-    document.getElementById("user-email").value = "";
-    e.stopPropagation();
-    e.preventDefault();
-  }
-
-
-});
-*/
 
 function validEmail(e) {
   let mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -45,11 +30,3 @@ function myMap() {
   let marker = new google.maps.Marker({position: myCenter}); /*Génère un marqueur au centre de la map qui ici est Akema*/
   marker.setMap(map);
 }
-
-
-
-
-
-
-
-
