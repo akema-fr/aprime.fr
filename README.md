@@ -7,10 +7,8 @@ tout ce qui est poussé sur la branche **gh-pages** est donc mit en production s
 
 ### Faire des modifications sur le site
 
-Pour faire des modifications sur le site, il suffit de cloner ce repository localement, de faire les changements
-néscessaires, puis de push sur la branche **gh-pages**.
+Pour faire des modifications sur le site, il suffit de cloner ce repository localement, de faire les changements nécessaires, puis de push sur la branche **gh-pages**.
 
-Dans le cas ou il serait nécessaire de versionner des changements sans les mettre en ligne, il suffit de pousser 
-ces derniers sur la branche **dev** prévue à cet effet. Tout ce qui se trouve en dehors de **gh-pages** ne sera pas visible
+Dans le cas ou il serait nécessaire de versionner des changements sans les mettre en ligne, il suffit de pousser ces derniers sur la branche **dev** prévue à cet effet. Tout ce qui se trouve en dehors de **gh-pages** ne sera pas visible
 sur le site aprime.fr
 
