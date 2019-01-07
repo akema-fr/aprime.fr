@@ -42,7 +42,8 @@ body{
   padding: 0;
   margin : 0;
   width : 100%;
-  overflow-x : hidden;
+  max-width : 100%;
+  overflow- : hidden;
 }
 
 .nomargin{
@@ -857,6 +858,16 @@ h2.center{
   #etude p {
     text-align: center;
   }
+ 
+  #team {
+    display: none;
+  }
+
+  #actualite img{
+    width: 50%;
+    height : auto;
+  }
+
 
 }
 
@@ -940,5 +951,15 @@ h2.center{
   #etude p {
     text-align: center;
   }
+
+  #team {
+    display: none;
+  }
+
+  #actualite img{
+    width: 10%;
+    height : auto;
+  }
+
 
 }
