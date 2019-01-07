@@ -471,14 +471,18 @@ img.resize {
 	height: auto;
 }
 
+#devis-recrutement,
 #devis{
-	margin-top: 5%;
 	font-family: PoiretOne, serif;
-	/*margin-bottom: 3%;*/
   background-color : #EBEBEB;
   width : 100%;
   padding-bottom : 2%;
 }
+
+#devis{
+  margin-top: 5%;
+}
+
 
 #actualite{
   background-color : #EBEBEB;
@@ -494,7 +498,6 @@ img.resize {
 #actualite img{
   padding : 0 1.2%;
 }
-
 
 #numero{
 	background: #747A7D;
@@ -736,14 +739,16 @@ h2.center{
   }
 
   #titrelogo{
-    font-size: 20px;
+   /* font-size: 20px;
     top: 17px;
-    position: fixed;
+    position: fixed;*/
+    display : none;
   }
 
   .logocss{
-    max-height: 20px;
-    position: fixed;
+   /* max-height: 20px;
+    position: fixed;*/
+    display : none;
   }
 
   .menu{
@@ -784,6 +789,10 @@ h2.center{
     width : 65%;
   }
 
+  #img1{
+    background-size: 100%;
+  }
+
 
 }
 
@@ -802,14 +811,16 @@ h2.center{
   }
 
   #titrelogo{
-    font-size: 20px;
+   /* font-size: 20px;
     top: 17px;
-    position: fixed;
+    position: fixed;*/
+    display : none;
   }
 
   .logocss{
-    max-height: 20px;
-    position: fixed;
+   /* max-height: 20px;
+    position: fixed;*/
+    display : none;
   }
 
   .menu{
@@ -868,6 +879,9 @@ h2.center{
     height : auto;
   }
 
+  #img1{
+    background-size: 100%;
+  }
 
 }
 
@@ -881,14 +895,16 @@ h2.center{
   }
 
   #titrelogo{
-    font-size: 20px;
+   /* font-size: 20px;
     top: 17px;
-    position: fixed;
+    position: fixed;*/
+    display : none;
   }
 
   .logocss{
-    max-height: 20px;
-    position: fixed;
+   /* max-height: 20px;
+    position: fixed;*/
+    display : none;
   }
 
   .menu{
@@ -940,7 +956,7 @@ h2.center{
   }
 
   #cafe{
-    width : 64%;
+    width : 64% !important;
   }
 
   .technos img {
@@ -959,6 +975,10 @@ h2.center{
   #actualite img{
     width: 10%;
     height : auto;
+  }
+
+  #img1{
+    background-size: 100%;
   }
 
 
