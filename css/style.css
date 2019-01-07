@@ -239,7 +239,6 @@ h5.italic{
 .barremenu li:hover{
   background : rgba(16, 76, 99, .7);
   transition: 0.4s;
-/*  font-size : 1em;*/
 }
 
 #btnHaut{
@@ -277,7 +276,6 @@ h5.italic{
 #etude,
 #corps{
 	background: whiteSmoke;
-	/*font-family: MavenProMedium, serif;*/
   color : black;
 }
 
@@ -314,7 +312,6 @@ h5.italic{
 }
 
 .soustitre {
-  margin: 1% 10%;
   font-family: MavenProRegular, serif;
   color : #555;
   text-align: left;
@@ -356,6 +353,12 @@ h5.italic{
   background-position: right;
   background-size: 40%;
 }
+
+.technos img {
+    width : 10%;
+    height : auto;
+}
+
 
 #notfound{
   background: whiteSmoke;
@@ -497,6 +500,8 @@ img.resize {
 
 #actualite img{
   padding : 0 1.2%;
+  width:10%;
+  height: auto;
 }
 
 #numero{
@@ -875,7 +880,7 @@ h2.center{
   }
 
   #actualite img{
-    width: 50%;
+    width: 10%;
     height : auto;
   }
 
