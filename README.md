@@ -2,7 +2,7 @@
 Site APRIME Nouvelle version
 
 Ce site est hébergé sur les serveur [Github Pages](https://pages.github.com), 
-tout ce qui est poussé sur la branche **gh-pages** est donc mit en production sur [aprime.fr](http://aprime.fr)
+tout ce qui est poussé sur la branche **gh-pages** est donc mis en production sur [aprime.fr](http://aprime.fr)
 
 
 ### Faire des modifications sur le site
