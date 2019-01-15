@@ -209,12 +209,12 @@
   <div class="row" id="footer">
         <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12" id="contact">
           <h2 class="center white" id="contactid">Nous joindre par mail</h2>
-          <form id="formu" onsubmit="validEmail()" action="https://formspree.ioc%6f%6e&#116;&#97;c%74&#64;a&#112;&#114;i&#109;e%2efr" method="POST">
+          <form id="formu" onsubmit="validEmail()" action="https://formspree.io/&#114;%65%63r%75%74e%6d%65%6et&#64;%61pr&#105;%6d&#101;%2e&#102;r" method="POST">
             <input type="text" name="nom" placeholder="Votre nom" size="55" required><br><br>
-            <input type="email" placeholder="Votre email" id="user-email" size="55" required><br><br>
+            <input type="email" id="user-email" name="email" placeholder="Votre email" size="55" required><br><br>
             <input type="text" name="sujet" placeholder="Sujet" size="55" required><br><br>
             <textarea name="message" placeholder="Votre message" rows="8" cols="54" required></textarea><br><br>
-            <input type="submit" id="contact-form-submit" value="Envoyer">
+            <input type="submit" id="contact-form-submit" name="contact-form-submit" value="Envoyer">
             <p id="masque">Veuillez saisir une adresse mail valide...</p>
           </form>
         </div>
@@ -240,6 +240,8 @@
           <p class="mentions"><a href="mentions_legales.html" target="_blank">Mentions légales</a> - By Aprime</p>
         </div>
   </div>
+
+<noscript>Désolé, votre navigateur ne supporte pas Javascript. </noscript>
 
 </body>
 </html>
