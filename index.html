@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
   <title>APRIME</title>
@@ -18,19 +18,17 @@
 <body id="bodytest">
 
 
-   <div id="titre_principal" >
-     <div class="row menu nomargin" id="burger-content">
-     <!--  <nav> -->
-        <ul class="barremenu nomargin">
+  <div id="titre_principal" >
+    <div class="row menu nomargin" id="burger-content">
+       <ul class="barremenu nomargin">
           <li><a href="index.html#aprime" onclick="closeSidebar()">APRIME</a></li>
           <li><a href="developpement.html#corps" onclick="closeSidebar()">NOS POLES D'EXPERTISE</a></li>
           <li><a href="#references" onclick="closeSidebar()">NOS REFERENCES</a></li>
           <li><a href="opportunites.html#corps">NOS OPPORTUNITES</a></li>
           <li><a href="index.html#contactid" onclick="closeSidebar()">CONTACT</a></li>
-        </ul>
-     <!--  </nav> -->
+        </ul>     
     </div>
-   </div>
+  </div>
 
   <div>
     <img class="logocss" src="logos/aprime_logo_loaded_blanc.png" alt="Logo Aprime"/>
@@ -157,17 +155,17 @@
                     <li>Conception et réalisation de portails d'entreprise,</li>
                     <li>Processus de développement et méthode AGILE.</li>
                   </ul>
-                </p> 
-                <p>
-                En gestion des infrastructures :<br>
-                  <ul>
-                    <li>Audit et architecture,</li>
-                    <li>Ingénierie Systèmes et Réseaux,</li>
-                    <li>Exploitation des SI, Production,</li>
-                    <li>Expertise et administration des données,</li>
-                    <li>Virtualisation, Cloud, Mobilité,</li>
-                    <li>Gestion de projets MOA, MOE.</li>
-                  </ul>
+              </p> 
+              <p>
+              En gestion des infrastructures :<br>
+                <ul>
+                  <li>Audit et architecture,</li>
+                  <li>Ingénierie Systèmes et Réseaux,</li>
+                  <li>Exploitation des SI, Production,</li>
+                  <li>Expertise et administration des données,</li>
+                  <li>Virtualisation, Cloud, Mobilité,</li>
+                  <li>Gestion de projets MOA, MOE.</li>
+                </ul>
               </p> 
               <br>
         </div>
@@ -258,7 +256,7 @@
           <a href="https://youtu.be/JBULId7E70w?list=UUozLFn8-7NixzPMBTPgd5-g" target="_blank">
             <img src="logos/Youtube.png" alt="Youtube">
           </a>    
-           <a href="https://11h42.com/" target="_blank">
+          <a href="https://11h42.com/" target="_blank">
             <img src="logos/Logo11h42.png" alt="11h42.com">
           </a>
         </div>
@@ -266,10 +264,9 @@
   </div>
 
   <div class="row" id="footer">
-        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12" id="contact">
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12" id="contact">
           <h2 class="center white" id="contactid">Nous joindre par mail</h2>
-          <form id="formu" onsubmit="validEmail()" action="https://formspree.io/&#99;ti&#109;&#111;n%6e%69er&#64;&#97;kema%2efr" method="POST">
-
+          <form id="formu" onsubmit="validEmail()" action="https://formspree.io/c%6f%6e&#116;&#97;c%74&#64;a&#112;&#114;i&#109;e%2efr" method="POST">
             <input type="text" name="nom" placeholder="Votre nom" size="55" required><br><br>
             <input type="email" placeholder="Votre email" id="user-email" size="55" required><br><br>
             <input type="text" name="sujet" placeholder="Sujet" size="55" required><br><br>
@@ -277,27 +274,28 @@
             <input type="submit" id="contact-form-submit" value="Envoyer">
             <p id="masque">Veuillez saisir une adresse mail valide...</p>
           </form>
-        </div>
+      </div>
 
-        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 center white" id="bureaux">
+      <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 center white" id="bureaux">
           <h2 class="center">Nos bureaux</h2>
           <p>APRIME SAS<br>
            3, rue de l'Arrivée<br>
             75015 Paris<br>
             France<br>
             Tel : 01 40 22 03 49<br>
-            Fax : 09 72 36 01 93</p>
-        </div>
+            Fax : 09 72 36 01 93
+          </p>
+      </div>
 
-        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 white" id="localisation">
-          <h2 class="center">Nous sommes ici</h2>
-          <div id="map">
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsPq5xRnNOj-_ivwXj7yQJXwIl-ZSL9mY&callback=myMap"></script> <!-- Le lien Google Maps ne doit surtout pas être touché à moins de vouloir générer une nouvelle clé API (voir https://www.w3schools.com/graphics/google_maps_basic.asp) -->
-          </div>
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 white" id="localisation">
+        <h2 class="center">Nous sommes ici</h2>
+        <div id="map">
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsPq5xRnNOj-_ivwXj7yQJXwIl-ZSL9mY&callback=myMap"></script> <!-- Le lien Google Maps ne doit surtout pas être touché à moins de vouloir générer une nouvelle clé API (voir https://www.w3schools.com/graphics/google_maps_basic.asp) -->
         </div>
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 white">
-          <p class="mentions"><a href="mentions_legales.html" target="_blank">Mentions légales</a> - By Aprime</p>
-        </div>
+      </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 white">
+        <p class="mentions"><a href="mentions_legales.html" target="_blank">Mentions légales</a> - By Aprime</p>
+      </div>
   </div>
 
 </body>
