@@ -58,7 +58,7 @@ body{
   overflow : hidden;
   position : relative;
 }
-
+      
 #titre_opportunites{
   width: 100%;
   padding-bottom: 53%;
@@ -91,7 +91,7 @@ body{
   position: fixed;
   z-index: 99;
   border: none;
-  color: white;
+  color: #aaaaaa;
   background: transparent;
   font-size: 30px;
   display: none;
@@ -272,7 +272,8 @@ h5.italic{
   background-position: center;
 }
 
-#infra,
+#infra-slide,
+#etude-slide,
 #etude,
 #corps{
 	background: whiteSmoke;
@@ -318,12 +319,12 @@ h5.italic{
   font-size: 1.2em;
 }
 
-#infra {
+#infra-slide {
   display : none;
 }
 
-#infra p,
-#etude p {
+#infra-slide p,
+#etude-slide p{
   margin: 1% 10%;
   font-family: MavenProRegular, serif;
   color : #555;
@@ -331,8 +332,8 @@ h5.italic{
   font-size: 1em;
 }
 
-#infra img,
-#etude img {
+#infra-slide img,
+#etude-slide img {
   width : 10%;
   padding : 0 0.5%;
 }
@@ -870,8 +871,8 @@ h2.center{
     display: none;
   }
 
-  #infra p,
-  #etude p {
+  #infra-slide p,
+  #etude-slide p {
     text-align: center;
   }
  
@@ -968,8 +969,8 @@ h2.center{
     display: none;
   }
 
-  #infra p,
-  #etude p {
+  #infra-slide p,
+  #etude-slide p {
     text-align: center;
   }
 
