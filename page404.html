@@ -17,8 +17,8 @@
 
 <body id="bodytest">
   
-   <div id="titre_principal" >
-     <div class="row menu nomargin" id="burger-content">
+  <div id="titre_principal" >
+    <div class="row menu nomargin" id="burger-content">
       <nav>
         <ul class="barremenu nomargin">
           <li><a href="index.html#aprime" onclick="closeSidebar()">APRIME</a></li>
@@ -26,10 +26,10 @@
           <li><a href="index.html#reference" onclick="closeSidebar()">NOS REFERENCES</a></li>
           <li><a href="opportunites.html#corps">NOS OPPORTUNITES</a></li>
           <li><a href="index.html#contactid" onclick="closeSidebar()">CONTACT</a></li>
-      </ul>
+        </ul>
       </nav>
     </div>
-   </div>
+  </div>
 
   <div>
     <img class="logocss" src="logos/aprime_logo_loaded_blanc.png" alt="Logo Aprime"/>
@@ -114,7 +114,7 @@
             <p>La page demandée n'est pas disponible.
             </p>
         </div>
-       </div>
+      </div>
     
 
       <div class="row">
@@ -130,12 +130,12 @@
   <div class="row" id="footer">
         <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12" id="contact">
           <h2 class="center white" id="contactid">Nous joindre par mail</h2>
-          <form id="formu" onsubmit="validEmail()" action="https://formspree.io/%65&#110;&#122;%6f&#46;f%6fnt&#101;&#110;e%61u&#64;hotma%69l%2e&#102;%72" method="POST">
+          <form id="formu" onsubmit="validEmail()" action="https://formspree.io/&#114;%65%63r%75%74e%6d%65%6et&#64;%61pr&#105;%6d&#101;%2e&#102;r" method="POST">
             <input type="text" name="nom" placeholder="Votre nom" size="55" required><br><br>
-            <input type="email" placeholder="Votre email" id="user-email" size="55" required><br><br>
+            <input type="email" id="user-email" name="email" placeholder="Votre email" size="55" required><br><br>
             <input type="text" name="sujet" placeholder="Sujet" size="55" required><br><br>
             <textarea name="message" placeholder="Votre message" rows="8" cols="54" required></textarea><br><br>
-            <input type="submit" id="contact-form-submit" value="Envoyer">
+            <input type="submit" id="contact-form-submit" name="contact-form-submit" value="Envoyer">
             <p id="masque">Veuillez saisir une adresse mail valide...</p>
           </form>
         </div>
@@ -147,7 +147,8 @@
             75015 Paris<br>
             France<br>
             Tel : 01 40 22 03 49<br>
-            Fax : 01 40 22 03 49</p>
+            Fax : 09 72 36 01 9
+          </p>
         </div>
 
         <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 white" id="localisation">
@@ -160,6 +161,8 @@
           <p class="mentions"><a href="mentions_legales.html" target="_blank">Mentions légales</a> - By Aprime</p>
         </div>
   </div>
+
+<noscript>Désolé, votre navigateur ne supporte pas Javascript. </noscript>
 
 </body>
 </html>
